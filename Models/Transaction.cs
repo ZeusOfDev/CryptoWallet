@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CryptoWalletApp;
+namespace CryptoWalletApp.Models;
 
 public partial class Transaction
 {
@@ -11,7 +11,7 @@ public partial class Transaction
 
     public string Receiver { get; set; } = null!;
 
-    public string Amount { get; set; } = null!;
+    public decimal? Amount { get; set; }
 
     public DateOnly? Tdate { get; set; }
 

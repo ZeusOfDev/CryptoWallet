@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CryptoWalletApp;
+namespace CryptoWalletApp.Models;
 
 public partial class User
 {
@@ -15,7 +15,7 @@ public partial class User
 
     public string? UserDesc { get; set; }
 
-    public string UserBalance { get; set; } = null!;
+    public decimal? UserBalance { get; set; }
 
     public virtual ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
 
@@ -23,5 +23,5 @@ public partial class User
 
     public virtual ICollection<UserCrypto> UserCryptos { get; set; } = new List<UserCrypto>();
 
-    public virtual ICollection<Role> Roles { get; set; } = new List<Role>();
+    public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 }

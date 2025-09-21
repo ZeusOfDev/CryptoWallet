@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CryptoWalletApp;
+namespace CryptoWalletApp.Models;
 
 public partial class UserCrypto
 {
@@ -9,9 +9,9 @@ public partial class UserCrypto
 
     public int UserId { get; set; }
 
-    public int CryptoId { get; set; }
+    public string CryptoId { get; set; } = null!;
 
-    public string Ucbalance { get; set; } = null!;
+    public decimal? Ucbalance { get; set; }
 
     public virtual Crypto Crypto { get; set; } = null!;
 

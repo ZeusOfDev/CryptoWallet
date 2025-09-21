@@ -3,13 +3,15 @@ using System.Collections.Generic;
 
 namespace CryptoWalletApp.Models;
 
-public partial class RefreshToken
+public partial class UserRole
 {
-    public string Token { get; set; } = null!;
+    public int Urid { get; set; }
+
+    public string RoleId { get; set; } = null!;
 
     public int UserId { get; set; }
 
-    public bool IsRevoked { get; set; }
+    public virtual Role Role { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;
 }
